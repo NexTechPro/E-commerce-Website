@@ -1,0 +1,716 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* Navabar Section */
+header {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar {
+    background-color: #cf5c36;
+    color: #ffffff;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+.navbar-brand {
+    width: 100%;
+    height: auto;
+    margin-left: 0px;
+}
+
+.navbar-nav .nav-link {
+    text-decoration: none;
+    color: #ffffff !important;
+    padding: 10px;
+    margin-left: 2rem;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 4px;
+    background-color: rgb(228, 228, 139);
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    font-size: 20px;
+    background-color: beige !important;
+    border: 4px solid rgb(95, 95, 17);
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
+    filter: drop-shadow(0px 0px 12px  rgb(184, 184, 21));
+}
+/* Banner Section */
+#box1 {
+    background-color: #F2E7C9;
+    margin-top: 5rem;
+    padding: 5rem 5rem;
+}
+
+.hero .carousel {
+    width: 100%;
+    height: 50vh;
+    margin-top: 10rem;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Featured Products Section */
+.featuredProducts {
+    padding-top: 5rem;
+}
+
+.featuredProducts-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #cf5c36;
+    margin-bottom: 2rem;
+}
+
+/* Make the cards responsive */
+.featuredProducts .card {
+    margin-bottom: 2rem;
+    width: 80%;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.featuredProducts .card img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    transition: transform 0.3s ease;
+}
+
+.featuredProducts .card:hover img {
+    transform: scale(1.1);
+}
+
+/* Cards in a responsive grid */
+.row > .col-md-6 {
+    padding: 15px;
+}
+
+.card .btn-primary {
+    color: #ffffff;
+    background-color: darkred;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.card .btn-primary:hover {
+    color: #ffffff;
+    background-color: olivedrab;
+}
+
+/* Contact Details */
+footer {
+    background-color: #cf5c36;
+    padding: 40px 0;
+}
+
+.footer-heading {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: whitesmoke;
+}
+
+.social-icons a {
+    font-size: 2rem;
+    color: #f0f0f0;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffcc00;
+}
+
+/* Form styles */
+form label {
+    font-weight: bold;
+    color: white;
+    margin-right: 5px;
+}
+
+form .btn-primary {
+    background-color: rgb(243, 203, 101);
+    color: black;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 2px solid darkgoldenrod;
+}
+
+form .btn-primary:hover {
+    background-color: #ffcc00;
+    color: black;
+    border: 2px solid #cf5c36;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* ----------------------------------------- Products Page  -------------------------------------------- */
+/* Search Bar Section */
+.searchbar {
+    background-color:#bcceb5;
+    padding: 10px 0;
+    margin-top: 5rem;
+    border-radius: 8px;
+}
+
+.btn_search {
+    background-color: #D3D3D3;
+    color: black;
+    border-radius: 8px;
+    padding: 2px 5px;
+}
+
+/* Sidebar Area */
+aside {
+    background-color: #bcceb5;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+aside h5 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+aside .form-select, aside .form-check {
+    margin-bottom: 1rem;
+}
+
+aside .form-check-input {
+    margin-right: 0.5rem;
+}
+
+aside .form-check-label {
+    margin-right: 1rem;
+}
+
+aside .form-check {
+    display: flex;
+    align-items: center;
+}
+
+/* Main Content Area */
+#box2 {
+    background-color: #bfd7b5;
+    margin-top: 5rem;
+    padding: 5rem 5rem;
+}
+
+#box2 h1 {
+    color: #273b09;
+    font-size: 3rem;
+    margin-top: 1rem;
+    padding-top: 3rem;
+}
+
+#box2 .card {
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    width: 90%;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    gap: 2rem;
+    filter: drop-shadow(0px 0px 15px #273b09);
+}
+
+#box2 .card:hover {
+    transform: scale(1.2);
+}
+
+#box2 .card img {
+    width: 100%;
+    height: 70vh;
+}
+
+.card .btn_product {
+    background-color: #002400;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+/* ---------------------------Product Details Page------------------------------------- */
+.card-title{
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #273b09;
+}
+.variation{
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding: 5px 5px;
+    display: flex;
+}
+.variation select option{
+    font-size:20px;
+    padding: 5px 5px;
+}
+.quantity{
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding: 5px 5px;
+    display: flex;
+}
+.quantity select option{
+    font-size:20px;
+    padding: 5px 5px;
+}
+.reviews{
+    color: gold;
+    font-size: 2rem;
+    background-color: #ffffff;
+}
+#box3 {
+    background-color:#e9f7cf;
+    margin-top: 5rem;
+    padding: 5rem 5rem;
+}
+#box3 h1{
+    color:#333;
+    font-size: 3rem;
+    margin-top:1rem;
+    padding-top: 3rem;
+}
+#box3 .card{
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    width: 90%;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    gap: 2rem;
+    filter: drop-shadow(0px 0px 12px #333);
+}
+#box3 .card:hover{
+    transform: scale(1.2);
+}
+#box3 .card img{
+    width:100%;
+    height:70vh;
+}
+
+
+/* ---------------------------------------- Shopping Cart Page --------------------------------------------- */
+#box4 {
+    background-color:#DAA588;
+    margin-top: 5rem;
+    padding: 5rem 5rem;
+}
+#box4 h1{
+    color:#470a10;
+    font-size: 3rem;
+    margin-top:1rem;
+    padding-top: 3rem;
+}
+.cart-item img {
+    width: 100%;
+    height: auto;
+}
+.cart-item {
+    border-radius: 8px;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #e4d29d;
+    filter: drop-shadow(0px 0px 12px  #470a10);
+}
+.cart-item .item-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cart-item .item-details img {
+    width: 150px;
+    height: auto;
+}
+.cart-item .item-details .item-info {
+    flex: 1;
+    margin-left: 15px;
+}
+.cart-item .item-details .item-info p {
+    margin: 5px 0;
+}
+.cart-item .item-details .item-info .item-quantity {
+    margin: 5px 0;
+}
+#cart-totals{
+    background-color: #FAF3E0;
+    border-radius: 8px;
+    filter: drop-shadow(0px 0px 12px #470a10);
+}
+.cart-item .item-total {
+    text-align: right;
+    margin-top: 10px;
+}
+.btn-product {
+    margin-top: 10px;
+}
+.btn_shopping{
+    background-color: #3B3A36;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+.btn_shopping:hover{
+ background-color: #605E57;
+}
+.btn_cart{
+    background-color:#D94F2D ;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+.btn_cart:hover{
+    background-color: #F26B41 ;
+}
+.btn_checkout{
+    background-color: #8D2F23;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+.btn_checkout:hover{
+    background-color: #A84735;
+}
+
+/* -------------------------------------------- Check Out Page --------------------------------------------- */
+#box5 {
+    background-color:#D7BEA8;
+    margin-top: 5rem;
+    padding: 5rem 5rem;
+}
+#box5 h1{
+    color:#744253;
+    font-size: 5rem;
+    margin-top:15px;
+    padding-top:1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+#box5 h3,h4{
+    color:rgb(83, 47, 3);
+}
+#box5 label{
+    color:#7c442f;
+}
+#box5 input{
+    background-color:#B49286;
+    color:white ;
+}
+#box5 select {
+    background-color: #B49286;
+    color: white;
+    border: none; 
+}
+
+#box5 select option {
+    background-color: #B49286;
+    color: white;
+}
+
+#box5 .table {
+    background-color:#776744;
+    border-radius: 8px;
+    filter: drop-shadow(0px 0px 12px #744253); 
+    border-collapse: separate; 
+    overflow: hidden; 
+}
+
+#box5 .table td, 
+#box5 .table th {
+    background-color:#776744; 
+    border: none;
+    color: white;;
+}
+#box5 .btn_order{
+ background-color: #744253;
+ color: white;
+ border-radius: 8px;
+ font-size: 15px;
+ padding: 10px 10px;
+}
+
+/* ------------------------------------------- User Account Page ------------------------------------------ */
+#box6 {
+    background-color: #C7D59F;
+    margin-top: 5rem;
+    padding: 5rem;
+    height: auto; 
+    min-height: 100vh; 
+    box-sizing: border-box; 
+}
+
+#box6 h1 {
+    color: #1E441E;
+    font-size: 5rem;
+    margin-top: 15px;
+    padding-top: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#box6 #userAccountTabs {
+    filter: drop-shadow(0px 0px 12px #1E441E);
+    padding: 5px;
+}
+
+#box6 #userAccountTabs .nav-link {
+    color: #002400;
+}
+
+#box6 label {
+    color: #273b09;
+}
+
+#box6 .btn_reset {
+    background-color: #8FB339;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #8FB339;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#box6 #userAccountTabs .nav-link::after {
+    content: none; 
+}
+
+/*----------------------------------------------- Responsiveness ---------------------------------------------- */
+
+/* ---------------- 2. Home Page */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; 
+        height: auto; 
+    }
+
+    .logo_name {
+        margin-left: 170px;
+        font-size: 20px;
+    }
+
+    .navbar-brand{
+        margin-left: 80px;
+        width:50%;
+        height:50px;
+    }
+    .hamburger {
+        display: block;
+    }
+
+    .navbar-nav {
+        display: none;
+    }
+
+    .navbar-collapse.collapse.show {
+        display: block; 
+    }
+    #box1 {
+        padding: 2rem;
+    }
+
+    .featuredProducts .card {
+        width: 100%; 
+    }
+
+    .hero .carousel {
+        height: 40vh; 
+    }
+}
+
+/* ------------ 3. Product Details Page */
+@media (max-width: 576px) {
+    #box3 {
+        padding: 1rem;
+    }
+
+    #box3 h1 {
+        font-size: 1.8rem;
+    }
+
+    #box3 .card {
+        margin-top: 1.5rem;
+    }
+
+    #box3 .card img {
+        height: 35vh;
+    }
+
+    #box3 .card-title {
+        font-size: 1rem;
+    }
+
+    .reviews {
+        font-size: 1.2rem;
+    }
+
+    .variation,
+    .quantity {
+        flex-direction: column;
+        font-size: 0.7rem;
+    }
+
+    .variation select,
+    .quantity select {
+        width: 100%;
+    }
+
+    .btn_product {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/* ------------ 4. Shopping Cart Page */
+
+  /* Media Queries for Small Screens */
+  @media (max-width: 768px) {
+    .cart-item .item-details {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cart-item .item-details img {
+        margin-bottom: 15px;
+    }
+
+    #box4 {
+        padding: 2rem 1rem;
+    }
+
+    #cart-totals {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cart-item .item-details .item-info {
+        margin-left: 0;
+    }
+
+    #box4 h1 {
+        font-size: 2rem;
+        padding-top: 1rem;
+    }
+    .btn_cart,.btn_checkout,.btn_shopping{
+          flex-wrap: wrap;
+          font-size: 20px;
+          margin-right: 5px;
+          margin-top: 10px;
+          margin-bottom: 20px;
+    }
+}
+
+
+/* ------------ 5. Check Out Page */
+@media (max-width: 768px) {
+    #box5 h1 {
+        font-size: 1.5rem;
+    }
+
+    #box5 {
+        padding: 1rem; 
+    }
+
+    #box5 .table {
+        font-size: 0.875rem; 
+    }
+}
+
+
+/* ------------ 6. User Account Page */
+
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    #box6 {
+        padding: 3rem;
+    }
+    #box6 h1 {
+        font-size: 3rem;
+    }
+    #box6 .btn_reset {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+/* Extra small devices (phones, 576px and up) */
+@media (max-width: 576px) {
+    #box6 {
+        padding: 2rem;
+    }
+    #box6 h1 {
+        font-size: 2rem;
+    }
+    #box6 .btn_reset {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page with Sections</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Section 1: Navbar -->
+    <header>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-sm w-100 fixed-top">
+                <div class="container">
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="#">
+                        <img src="TrendEdge-logo.png" alt="TrendEdge Logo" width="100" height="100">
+                    </a>
+                    <h1>TrendEdge</h1>
+                    <!-- Navbar Toggle for Mobile View -->
+                    <button class="navbar-toggler hamburger" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Navbar Links and Buttons -->
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link" href="#">Products</a>
+                            <a class="nav-link" href="productDetails.html">ProductDetails</a>
+                            <a class="nav-link" href="shoppingCart.html">ShoppingCart</a>
+                            <a class="nav-link" href="checkOut.html">CheckOut</a>
+                            <a class="nav-link" href="userAccount.html">UserAccount</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section 2: Sidebar-->
+    <div class="container-fluid">
+        <div class="row">
+
+            <aside class="col-md-3">
+                <!-- Search Bar Section -->
+                <section class="searchbar">
+                    <form action="#">
+                        <div class="input-group">
+                            <input id="searchBar" type="text" class="form-control" placeholder="Search for products...">
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </div>
+                    </form>
+                </section>
+
+
+                <h5>Select Category</h5>
+                <select class="form-select mb-3">
+                    <option value="">All Categories</option>
+                    <option value="mens_wear">Men's Wear</option>
+                    <option value="kids_wear">Kids' Wear</option>
+                    <option value="womens_wear">Women's Wear</option>
+                </select>
+
+                <h5>Sort By</h5>
+                <select class="form-select mb-3">
+                    <option value="low_to_high">Price (Low to High)</option>
+                    <option value="high_to_low">Price (High to Low)</option>
+                </select>
+
+                <h5>Filter By Popularity</h5>
+                <div class="form-check mb-2">
+                    <input type="checkbox" class="form-check-input" id="popular">
+                    <label class="form-check-label" for="popular">Popular</label>
+                </div>
+                <div class="form-check mb-2">
+                    <input type="checkbox" class="form-check-input" id="unpopular">
+                    <label class="form-check-label" for="unpopular">Unpopular</label>
+                </div>
+            </aside>
+
+            <!-- Main Section: Product Cards -->
+
+            <main id="box2" class="container-fluid col-md-9">
+
+                <!-- Section 1: First 6 products -->
+                <div class="row section" id="section1">
+                    <!-- Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="women_1.jpg" class="card-img-top" alt="Long Frock 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Kurta</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="women_2.avif" class="card-img-top" alt="Casual Dress 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Green Long Frock</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="women_3.webp" class="card-img-top" alt="Long Frock 2">
+                            <div class="card-body">
+                                <h5 class="card-title">White Long Frock</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="women_4.webp" class="card-img-top" alt="Casual Dress 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Black Kurta</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="women_5.webp" class="card-img-top" alt="Long Frock 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Peach Part Dress</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="women_6.png" class="card-img-top" alt="Casual Dress 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Red Abaya</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Section 2: Next 6 products -->
+                <div class="row section d-none" id="section2">
+                    <!-- Card 8 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="women_3.webp" class="card-img-top" alt="Long Frock 2">
+                            <div class="card-body">
+                                <h5 class="card-title">White Long Frock</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 8 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="women_4.webp" class="card-img-top" alt="Casual Dress 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Black Kurta</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 9 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="women_9.webp" class="card-img-top" alt="Long Frock 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Sky Blue Abaya</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 10 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="women_10.jpg" class="card-img-top" alt="Casual Dress 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Blue and Red Kurta</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 11 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="women_11.webp" class="card-img-top" alt="Casual Dress 5">
+                            <div class="card-body">
+                                <h5 class="card-title">White and Red Kurta</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 12 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="women_12.webp" class="card-img-top" alt="Casual Dress 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Grey Long Frock</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- Section 3: Men's Wear First 6 products -->
+                <div class="row section d-none" id="section3">
+                    <!-- Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="men_1.webp" class="card-img-top" alt="Dark Blue Kurta">
+                            <div class="card-body">
+                                <h5 class="card-title">Dark Blue Kurta</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="men_2.webp" class="card-img-top" alt="Green Kurta">
+                            <div class="card-body">
+                                <h5 class="card-title">Green Kurta</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="men_3.jpg" class="card-img-top" alt="Light Blue Kurta">
+                            <div class="card-body">
+                                <h5 class="card-title">Light Blue Kurta</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="men_4.webp" class="card-img-top" alt="Brown Kurta">
+                            <div class="card-body">
+                                <h5 class="card-title">Brown Kurta</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="men_5.webp" class="card-img-top" alt="Sky Blue Shirt">
+                            <div class="card-body">
+                                <h5 class="card-title">Sky Blue Shirt</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="men_6.jpg" class="card-img-top" alt="Dark Blue Shirt">
+                            <div class="card-body">
+                                <h5 class="card-title">Dark Blue Shirt</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Section 4: Men's Wear Next 6 products -->
+                <div class="row section d-none" id="section4">
+                    <!-- Card 7 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="men_7.jpg" class="card-img-top" alt="Mehroon Shirt">
+                            <div class="card-body">
+                                <h5 class="card-title">Mehroon Shirt</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 8 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="men_8.jpeg" class="card-img-top" alt="Blue Coat">
+                            <div class="card-body">
+                                <h5 class="card-title">Blue Coat</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 9 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="men_9.webp" class="card-img-top" alt="Black Coat">
+                            <div class="card-body">
+                                <h5 class="card-title">Black Coat</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 10 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="men_10.webp" class="card-img-top" alt="Grey Shirt">
+                            <div class="card-body">
+                                <h5 class="card-title">Grey Shirt</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 11 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="men_11.webp" class="card-img-top" alt="Sky Blue Shirt">
+                            <div class="card-body">
+                                <h5 class="card-title">Sky Blue Shirt</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 12 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="men_12.webp" class="card-img-top" alt="White Shirt">
+                            <div class="card-body">
+                                <h5 class="card-title">White Shirt</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Kids Fifth Section -->
+                <div class="row section d-none" id="section5">
+                    <!-- Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="kids_1.webp" class="card-img-top" alt="Sky Blue Fairy Frock">
+                            <div class="card-body">
+                                <h5 class="card-title">Skin Blue Fairy Frock</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="kids_2.webp" class="card-img-top" alt="Black Fairy Frock">
+                            <div class="card-body">
+                                <h5 class="card-title">Black Fairy Frock</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="kids_3.webp" class="card-img-top" alt="Red Fairy Frock">
+                            <div class="card-body">
+                                <h5 class="card-title">Red Fairy Frock</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="kids_4.jpg" class="card-img-top" alt="Red Boys Shirt">
+                            <div class="card-body">
+                                <h5 class="card-title">Red Boys Shirt</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="kids_5.avif" class="card-img-top" alt="Green Boy's Kurta">
+                            <div class="card-body">
+                                <h5 class="card-title">Green Boy's Kurta</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="kids_6.webp" class="card-img-top" alt="Skin Girls Kurta">
+                            <div class="card-body">
+                                <h5 class="card-title">Skin Girls Kurta</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Kids Section 6 -->
+                <div class="row section d-none" id="section6">
+                    <!-- Card 7 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="kids_7.webp" class="card-img-top" alt="Sky Blue Long Frock">
+                            <div class="card-body">
+                                <h5 class="card-title">Sky Blue Long Frock</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 8 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="kids_8.webp" class="card-img-top" alt="Dark Blue Boy's Shirt">
+                            <div class="card-body">
+                                <h5 class="card-title">Dark Blue Boy's Shirt</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 9 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="kids_9.webp" class="card-img-top" alt="Dark Teal Girls Shirt">
+                            <div class="card-body">
+                                <h5 class="card-title">Dark Teal Girls Shirt</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 10 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="kids_10.webp" class="card-img-top" alt="Black Boys Shirt">
+                            <div class="card-body">
+                                <h5 class="card-title">Black Boys Shirt</h5>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Card 11 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="kids_11.webp" class="card-img-top" alt="Red Long Frock">
+                            <div class="card-body">
+                                <h5 class="card-title">Red Long Frock</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 12 -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="kids_12.webp" class="card-img-top" alt="Purple Boy's Shirt">
+                            <div class="card-body">
+                                <h5 class="card-title">Purple Boy's Shirt</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+        </div>
+        </main>
+
+        <!-- Pagination Controls -->
+        <nav>
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled" id="prevPage"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#" id="page1" onclick="showSection(1)">1</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#" id="page2" onclick="showSection(2)">2</a></li>
+                <li class="page-item"><a class="page-link" href="#" id="page3" onclick="showSection(3)">3</a></li>
+                <li class="page-item"><a class="page-link" href="#" id="page4" onclick="showSection(4)">4</a></li>
+                <li class="page-item"><a class="page-link" href="#" id="page5" onclick="showSection(5)">5</a></li>
+                <li class="page-item"><a class="page-link" href="#" id="page6" onclick="showSection(6)">6</a></li>
+                <li class="page-item" id="nextPage"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        let currentPage = 1;
+        const totalPages = 6; // Adjust according to your total number of sections
+
+        function showSection(sectionNumber) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => section.classList.add('d-none'));
+
+            // Show selected section
+            document.getElementById('section' + sectionNumber).classList.remove('d-none');
+
+            // Update current page
+            currentPage = sectionNumber;
+            updatePagination();
+        }
+
+        function updatePagination() {
+            // Disable previous button on the first page
+            document.getElementById('prevPage').classList.toggle('disabled', currentPage === 1);
+
+            // Disable next button on the last page
+            document.getElementById('nextPage').classList.toggle('disabled', currentPage === totalPages);
+
+            // Update active page
+            document.querySelectorAll('.page-item').forEach(item => item.classList.remove('active'));
+            document.querySelector('#page' + currentPage).parentElement.classList.add('active');
+        }
+
+        // Event listener for the "Next" button
+        document.getElementById('nextPage').addEventListener('click', function (e) {
+            e.preventDefault();
+            if (currentPage < totalPages) {
+                showSection(currentPage + 1);
+            }
+        });
+
+        // Event listener for the "Previous" button
+        document.getElementById('prevPage').addEventListener('click', function (e) {
+            e.preventDefault();
+            if (currentPage > 1) {
+                showSection(currentPage - 1);
+            }
+        });
+
+       // Code for Selecting , Filtering and Sorting 
+const womensWear = [
+    { id: 1, category: 'womens_wear', popularity: 'popular', title: 'Floral Dress', image: 'women_1.jpg' },
+    { id: 2, category: 'womens_wear', popularity: 'popular', title: 'Summer Skirt', image: 'women_2.avif' },
+    { id: 3, category: 'womens_wear', popularity: 'unpopular', title: 'Green Long Frock', image: 'women_3.webp' },
+    { id: 4, category: 'womens_wear', popularity: 'unpopular', title: 'Blue Blouse', image: 'women_4.webp' },
+    { id: 5, category: 'womens_wear', popularity: 'popular', title: 'Black Jacket', image: 'women_5.webp' },
+    { id: 6, category: 'womens_wear', popularity: 'unpopular', title: 'Red Sweater', image: 'women_6.png' },
+    { id: 7, category: 'womens_wear', popularity: 'popular', title: 'White Shirt', image: 'women_7.jpeg' },
+    { id: 8, category: 'womens_wear', popularity: 'popular', title: 'Patterned Leggings', image: 'women_8.webp' },
+    { id: 9, category: 'womens_wear', popularity: 'unpopular', title: 'Grey Cardigan', image: 'women9.webp' },
+    { id: 10, category: 'womens_wear', popularity: 'unpopular', title: 'Pink Scarf', image: 'women_10.jpg' },
+    { id: 11, category: 'womens_wear', popularity: 'popular', title: 'Denim Jacket', image: 'women_11.webp' },
+    { id: 12, category: 'womens_wear', popularity: 'popular', title: 'Elegant Maxi Dress', image: 'women_12.webp' },
+];
+const mensWear = [
+    { id: 13, category: 'mens_wear', popularity: 'popular', title: 'Casual Shirt', image: 'men_1.webp' },
+    { id: 14, category: 'mens_wear', popularity: 'popular', title: 'Formal Suit', image: 'men_2.webp' },
+    { id: 15, category: 'mens_wear', popularity: 'unpopular', title: 'Graphic Tee', image: 'men_3.jpg' },
+    { id: 16, category: 'mens_wear', popularity: 'unpopular', title: 'Jogging Pants', image: 'men_4.webp' },
+    { id: 17, category: 'mens_wear', popularity: 'popular', title: 'Leather Jacket', image: 'men_5.webp' },
+    { id: 18, category: 'mens_wear', popularity: 'popular', title: 'Denim Jeans', image: 'men_6.jpg' },
+    { id: 19, category: 'mens_wear', popularity: 'unpopular', title: 'Polo Shirt', image: 'men_7.jpg' },
+    { id: 20, category: 'mens_wear', popularity: 'unpopular', title: 'Chino Pants', image: 'men_8.jpeg' },
+    { id: 21, category: 'mens_wear', popularity: 'popular', title: 'Hoodie', image: 'men_9.webp' },
+    { id: 22, category: 'mens_wear', popularity: 'popular', title: 'Flannel Shirt', image: 'men_10.webp' },
+    { id: 23, category: 'mens_wear', popularity: 'unpopular', title: 'Track Jacket', image: 'men_11.webp' },
+    { id: 24, category: 'mens_wear', popularity: 'unpopular', title: 'Slim Fit Suit', image: 'men_12.webp' },
+];
+const kidsWear = [
+    { id: 25, category: 'kids_wear', popularity: 'popular', title: 'Cartoon T-Shirt', image: 'kids_1.webp' },
+    { id: 26, category: 'kids_wear', popularity: 'popular', title: 'Playful Shorts', image: 'kids_2.webp' },
+    { id: 27, category: 'kids_wear', popularity: 'unpopular', title: 'Bright Hoodie', image: 'kids_3.webp' },
+    { id: 28, category: 'kids_wear', popularity: 'unpopular', title: 'Animal Pajamas', image: 'kids_4.jpg' },
+    { id: 29, category: 'kids_wear', popularity: 'popular', title: 'Stripey Overalls', image: 'kids_5.avif' },
+    { id: 30, category: 'kids_wear', popularity: 'popular', title: 'Denim Jacket', image: 'kids_6.webp' },
+    { id: 31, category: 'kids_wear', popularity: 'unpopular', title: 'Flower Dress', image: 'kids_7.webp' },
+    { id: 32, category: 'kids_wear', popularity: 'unpopular', title: 'Colorful Leggings', image: 'kids_8.webp' },
+    { id: 33, category: 'kids_wear', popularity: 'popular', title: 'Superhero Cape', image: 'kids_9.webp' },
+    { id: 34, category: 'kids_wear', popularity: 'popular', title: 'Trendy Sneakers', image: 'kids_10.webp' },
+    { id: 35, category: 'kids_wear', popularity: 'unpopular', title: 'Animal Print Dress', image: 'kids_11.webp' },
+    { id: 36, category: 'kids_wear', popularity: 'unpopular', title: 'Cute Sandals', image: 'kids_12.webp' },
+];
+
+
+// Combine all products
+const products = [...womensWear, ...mensWear, ...kidsWear];
+
+let filteredProducts = products;
+
+function filterProducts() {
+    const category = document.querySelector('.form-select').value;
+    const searchQuery = document.getElementById('searchBar').value.toLowerCase();
+    const isPopular = document.getElementById('popular').checked;
+    const isUnpopular = document.getElementById('unpopular').checked;
+
+    filteredProducts = products.filter(product => {
+        const matchesCategory = category === '' || product.category === category;
+        const matchesSearch = product.title.toLowerCase().includes(searchQuery);
+        const matchesPopularity = (isPopular && product.popularity === 'popular') ||
+                                   (isUnpopular && product.popularity === 'unpopular') ||
+                                   (!isPopular && !isUnpopular);
+
+        return matchesCategory && matchesSearch && matchesPopularity;
+    });
+
+    displayProducts(filteredProducts);
+}
+
+function sortProducts(order) {
+    filteredProducts.sort((a, b) => {
+        if (order === 'low_to_high') {
+            return a.title.localeCompare(b.title);
+        } else if (order === 'high_to_low') {
+            return b.title.localeCompare(a.title);
+        }
+    });
+
+    displayProducts(filteredProducts);
+}
+
+function displayProducts(productsToDisplay) {
+    const section = document.getElementById('box2');
+    section.innerHTML = ''; 
+
+    productsToDisplay.forEach(product => {
+        const card = `
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="${product.image}" class="card-img-top" alt="${product.title}">
+                    <div class="card-body">
+                        <h5 class="card-title">${product.title}</h5>
+                    </div>
+                </div>
+            </div>
+        `;
+        section.innerHTML += card;
+    });
+}
+
+// Event listeners
+document.querySelector('.form-select').addEventListener('change', filterProducts);
+document.querySelectorAll('.form-select')[1].addEventListener('change', function() {
+    const sortOrder = this.value;
+    sortProducts(sortOrder);
+});
+document.querySelectorAll('.form-check-input').forEach(checkbox => {
+    checkbox.addEventListener('change', filterProducts);
+});
+document.getElementById('searchBar').addEventListener('input', filterProducts);
+
+
+ 
+</script>
+
+
+</body>
+
+</html>
